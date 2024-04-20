@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-function Input({onInput}) {
+interface Props {
+  onInput: React.ChangeEventHandler;
+}
+
+function Input({onInput}: Props) {
   return (
     <>
       <label>
@@ -9,7 +13,6 @@ function Input({onInput}) {
           placeholder="썸네일의 제목을 입력해주세요😊"
           onChange={onInput}
         />
-        <button>제목에 맞는 이미지 변환하기</button>
       </label>
     </>
   );

@@ -3,6 +3,7 @@ import ThumbnailMakeBox from "./layout/ThumbnailMakeBox";
 import Title from "./layout/Title";
 import Input from "./components/common/Input";
 import {useState} from "react";
+import Button from "./components/common/Button";
 
 function App() {
   const [inputText, setInputText] = useState("");
@@ -16,6 +17,7 @@ function App() {
       <Title />
       <ThumbnailMakeBox thumbnailTitle={inputText} />
       <Input onInput={handleInputText} />
+      <Button>제목에 맞는 이미지 변환하기</Button>
     </>
   );
 }

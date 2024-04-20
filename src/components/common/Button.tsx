@@ -1,7 +1,11 @@
-function Button() {
+interface Props {
+  children: React.ReactNode;
+}
+
+function Button({children, ...restProps}: Props) {
   return (
     <>
-      <div>Button</div>
+      <button {...restProps}>{children}</button>
     </>
   );
 }
